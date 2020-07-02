@@ -11,9 +11,8 @@ Trying to make the user's experience better than using the official Marvel's API
 
 [![Screen-Shot-2020-07-02-at-02-53-01.png](https://i.postimg.cc/bvVxVhQv/Screen-Shot-2020-07-02-at-02-53-01.png)](https://postimg.cc/WDrqtxYR)
 
-### Tech
+### Tech stack
 
-Dillinger uses a number of open source projects to work properly:
 
 | Technology | Status |
 | ------ | ------ |
@@ -26,4 +25,3 @@ Dillinger uses a number of open source projects to work properly:
 | MariaDB (latest image) | In use |
 | Docker | Planned |
 | Kubernetes | Planned |
-
