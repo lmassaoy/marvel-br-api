@@ -1,6 +1,5 @@
 package com.lyamada.domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.lyamada.utils.TranslationHelper;
 import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;
