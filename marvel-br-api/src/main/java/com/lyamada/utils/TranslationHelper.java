@@ -3,7 +3,6 @@ package com.lyamada.utils;
 import com.google.cloud.translate.Translate;
 import com.google.cloud.translate.Translate.TranslateOption;
 import com.google.cloud.translate.TranslateOptions;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 public class TranslationHelper {
     public static String translate(String sentence) {

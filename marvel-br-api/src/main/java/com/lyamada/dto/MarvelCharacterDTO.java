@@ -1,6 +1,5 @@
 package com.lyamada.dto;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.lyamada.domain.MarvelCharacter;
 
 import javax.json.bind.annotation.JsonbProperty;

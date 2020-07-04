@@ -36,4 +36,4 @@ pom.xml.versionsBackup
 release.properties
 
 # Credentials
-src/main/devops/docker-compose/*_env.list
+*env.list
