@@ -1,6 +1,0 @@
-BASE_URL=https://gateway.marvel.com/v1/public/characters
-Q_PARAM_APIKEY=9bd883247a88be2a1d1c4a015612c187
-Q_PARAM_HASH=f15c03fc9e194cf02033a2053cf4408a
-Q_PARAM_TS=1
-GOOGLE_API_KEY=AIzaSyB5BcnF-YbIv3-AImj9jRWrcZMAWOmkxig
-BD_URL=mysql://mariadb:3306/marvel_db
