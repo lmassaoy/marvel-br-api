@@ -1,6 +1,5 @@
 package com.lyamada.dto;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.lyamada.domain.MarvelCharacter;
 
 import javax.json.bind.annotation.JsonbProperty;
@@ -8,8 +7,7 @@ import javax.json.bind.annotation.JsonbPropertyOrder;
 import java.util.ArrayList;
 import java.util.List;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonbPropertyOrder({ "marvelId", "nome", "descricaoEN", "descricaoPT", "foto", "wiki" })
+@JsonbPropertyOrder({ "marvelId", "name", "description", "translatedDescription", "thumbnail", "wikiPage" })
 public class MarvelCharacterDTO {
     @JsonbProperty("marvelId")
     private int marvelId;

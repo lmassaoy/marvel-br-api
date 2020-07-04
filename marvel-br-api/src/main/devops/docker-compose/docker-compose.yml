@@ -1,0 +1,44 @@
+version: "3.7"
+services:
+    mariadb:
+      image: mariadb/server
+      container_name: mariadb
+      volumes:
+        - ./database/db_data:/var/lib/mysql:rw
+        - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      env_file:
+        - ./database/db_env.list
+      restart: always
+      ports:
+        - 3306:3306
+      networks:
+        - internal
+
+    adminer:
+      image: adminer
+      restart: always
+      ports:
+        - 8082:8080
+      networks:
+        - internal
+
+    marvel-api:
+      image: lyamadadocker/marvel-br-api-jvm
+      container_name: marvel-br-api-jvm
+      env_file:
+        - api_env.list
+      restart: always
+      ports:
+        - 8081:8081
+      depends_on:
+        - mariadb
+      networks:
+        - internal
+
+networks:
+  internal:
+    name: marvelNetwork
+    driver: bridge
+
+volumes:
+  db_data:
