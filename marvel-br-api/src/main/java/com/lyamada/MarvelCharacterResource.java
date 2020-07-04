@@ -22,6 +22,8 @@ import java.util.Optional;
 
 
 @Path("character")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class MarvelCharacterResource {
 
     @Inject
@@ -33,8 +35,6 @@ public class MarvelCharacterResource {
 
     @GET
     @Path("{marvelId}")
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
     public Uni<Response> getById(@PathParam("marvelId") int marvelId) {
         if (Optional.ofNullable(marvelId).orElse(0) != 0) {
             Uni<Response> response = MarvelCharacter.findByMarvelId(client, marvelId)
@@ -74,8 +74,6 @@ public class MarvelCharacterResource {
     }
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
     public Uni<Response> getByName(@QueryParam("name") String name, @QueryParam("nameStartsWith") String nameStartsWith,
                                    @QueryParam("limit") int limit) {
         if (name!=null) {
@@ -149,8 +147,6 @@ public class MarvelCharacterResource {
 
     @GET
     @Path("marvelResponse")
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
     public String name(@QueryParam("name") String name, @QueryParam("nameStartsWith") String nameStartsWith) {
         if (name!=null) {
             return marvelCharacterService.getByName(name,nameStartsWith,20);
@@ -164,8 +160,6 @@ public class MarvelCharacterResource {
 
     @GET
     @Path("marvelResponse/{marvelId}")
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
     public String name(@PathParam("marvelId") int marvelId) {
         return marvelCharacterService.getById(marvelId);
     }
