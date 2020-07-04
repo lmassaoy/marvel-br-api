@@ -26,6 +26,7 @@ Trying to make the user's experience better than using the official Marvel's API
 
 ## Swagger
 You're gonna be able to see the Swagger by accessing: http://localhost:8081/swagger-ui/ (once the application is running)
+#
 [![Screen-Shot-2020-07-04-at-04-01-42.png](https://i.postimg.cc/XJ08bVbW/Screen-Shot-2020-07-04-at-04-01-42.png)]()
 
 ## Running all services
@@ -33,4 +34,5 @@ You're gonna be able to see the Swagger by accessing: http://localhost:8081/swag
 ### Docker
 You should have a docker environment good to go (there are plenty of guides on the internet if you're not familiar with it).
 As soon as you're ready, click in the logo below and follow the instructions
+#
 [![docker-logo.png](https://i.postimg.cc/mg0jmZzR/docker-logo.png)](https://github.com/lmassaoy/marvel-br-api/tree/master/marvel-br-api/src/main/devops/Instructions.md)
