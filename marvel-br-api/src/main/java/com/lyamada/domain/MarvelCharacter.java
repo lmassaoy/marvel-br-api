@@ -64,7 +64,6 @@ public class MarvelCharacter {
                 wikiPage);
     }
 
-
     public static MarvelCharacter from(Row row) {
         return new MarvelCharacter(row.getInteger("marvelId"),
                                     row.getInteger("characterId"),
