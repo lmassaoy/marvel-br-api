@@ -1,0 +1,28 @@
+# for development - only starts db services
+version: "3.7"
+services:
+    mariadb:
+      image: mariadb/server
+      container_name: mariadb
+      volumes:
+        - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      env_file:
+        - ./db_env.list
+      restart: always
+      ports:
+        - 3306:3306
+      networks:
+        - internal
+
+    adminer:
+      image: adminer
+      restart: always
+      ports:
+        - 8082:8080
+      networks:
+        - internal
+
+networks:
+  internal:
+    name: marvelNetwork
+    driver: bridge
